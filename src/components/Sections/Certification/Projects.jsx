@@ -8,19 +8,19 @@ const DUMMY_PROJECTS = [
   {
     image: CommunityReachImg,
     title: "Community outreaches",
-    link: "/",
+    link: "https://instagram.com/ngcfoundation_?igshid=YmMyMTA2M2Y=",
     expandText: "Read more",
   },
   {
     image: BetaSaverImg,
     title: "Beta saver (fintech app)",
-    link: "/",
+    link: "https://www.behance.net/gallery/159819639/Case-study-for-a-fintech-app-(betasaver)/modules/901774025",
     expandText: "View case study",
   },
   {
     image: NGOWeb,
     title: "Connect (NGO website)",
-    link: "/",
+    link: "https://www.behance.net/gallery/159813029/CASE-STUDY-(NGO-embedded-website)/modules/901737759",
     expandText: "View case study",
   },
 ];

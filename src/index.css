@@ -8,3 +8,29 @@ body,
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 430px) {
+  .slideIn {
+    animation: slideIn 300ms ease-in-out;
+  }
+  .slideOut {
+    animation: slideOut 300ms ease-in-out;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    left: 30rem;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slideOut {
+  from {
+    right: 30rem;
+  }
+  to {
+    right: 0;
+  }
+}

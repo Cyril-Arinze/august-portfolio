@@ -4,10 +4,10 @@ import AboutMeSection from "../components/Sections/About/AboutMeSection";
 
 const AboutPage = () => {
   return (
-    <>
+    <div className="slideIn absolute md:relative w-full bg-[#080707]">
       <BackButton />
       <AboutMeSection />
-    </>
+    </div>
   );
 };
 

@@ -74,7 +74,12 @@ const Navbar = () => {
                   <a href="#projects">Projects</a>
                 </li>
                 <li onClick={toggleNavHandler}>
-                  <Link to="/">Resume(product design)</Link>
+                  <a
+                    href="../../assests/Ambrose Ijeoma Augustina resume.pdf"
+                    download
+                  >
+                    Resume(product design)
+                  </a>
                 </li>
               </ul>
               <div>

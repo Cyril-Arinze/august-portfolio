@@ -12,7 +12,13 @@ const ProjectCard = ({ title, link, image, expandText }) => {
       </div>
       <div>
         <p className="text-xl font-medium mb-2">{title}</p>
-        <a href={link ? link : "/"} className="text-base text-[#FF8762]">
+
+        <a
+          href={link ? link : "/"}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="text-base text-[#FF8762]"
+        >
           {expandText} &gt;
         </a>
       </div>

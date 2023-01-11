@@ -8,7 +8,7 @@ const DUMMY_DATA = [
     title: "Humanity",
     description:
       "Founder of a non-profit organization in Nigeria that helps less-privilege children",
-    link: "/",
+    externalLink: "https://instagram.com/ngcfoundation_?igshid=YmMyMTA2M2Y=",
     color: "bg-[#343434]/40",
   },
   {
@@ -16,7 +16,7 @@ const DUMMY_DATA = [
     title: "UI/UX design",
     description:
       "I create user centered designs that solves users problems and converts.",
-    link: "/UIUX",
+    internalLink: "/UIUX",
     color: "bg-[#FF8762]",
   },
 ];
@@ -35,7 +35,8 @@ const WhatIdoSection = () => {
               icon={data.icon}
               title={data.title}
               description={data.description}
-              link={data.link}
+              externalLink={data.externalLink}
+              internalLink={data.internalLink}
               color={data.color}
             />
           );

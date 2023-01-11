@@ -6,12 +6,12 @@ import WhatIdoSection from "../components/Sections/What I do/WhatIdoSection";
 
 const Home = () => {
   return (
-    <>
+    <div className="slideOut absolute md:relative w-full bg-[#080707]">
       <Hero />
       <WhatIdoSection />
       <CertificationSection />
       <ContactSection />
-    </>
+    </div>
   );
 };
 

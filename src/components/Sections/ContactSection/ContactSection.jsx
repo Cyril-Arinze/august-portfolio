@@ -4,15 +4,21 @@ const ContactSection = () => {
   return (
     <section>
       <div className="max-w-7xl text-white">
-        <div className="bg-[#343434]/40 p-8 space-y-5">
+        <div className="bg-[#343434]/40 p-8 flex flex-col gap-y-5">
           <p className="text-2xl font-bold">Let’s work together as a team.</p>
-          <button className="bg-[#FF8762] py-3 px-5 rounded-2xl text-sm">
+          <a
+            href="mailto:Augustdesigns18@gmail.com"
+            className="bg-[#FF8762] py-3 px-5 rounded-2xl text-sm w-fit"
+          >
             Contact me
-          </button>
+          </a>
         </div>
         <div className="px-8 py-12 text-center space-y-5">
           <p className="text-base font-normal">About Me</p>
-          <div className="flex justify-center">
+          <a
+            href="mailto:Augustdesigns18@gmail.com"
+            className="flex justify-center"
+          >
             <svg
               width="30"
               height="20"
@@ -25,7 +31,7 @@ const ContactSection = () => {
                 fill="white"
               />
             </svg>
-          </div>
+          </a>
         </div>
       </div>
     </section>
