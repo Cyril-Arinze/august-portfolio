@@ -14,13 +14,13 @@ const DUMMY_PROJECTS = [
   {
     image: BetaSaverImg,
     title: "Beta saver (fintech app)",
-    link: "https://www.behance.net/gallery/159819639/Case-study-for-a-fintech-app-(betasaver)/modules/901774025",
+    link: "https://www.behance.net/gallery/159819639/Case-study-for-a-fintech-app-%28betasaver%29",
     expandText: "View case study",
   },
   {
     image: NGOWeb,
     title: "Connect (NGO website)",
-    link: "https://www.behance.net/gallery/159813029/CASE-STUDY-(NGO-embedded-website)/modules/901737759",
+    link: "https://www.behance.net/gallery/159813029/CASE-STUDY-%28NGO-embedded-website%29",
     expandText: "View case study",
   },
 ];
@@ -44,12 +44,17 @@ const Projects = () => {
           );
         })}
       </ul>
-      <div className="flex justify-center mt-12">
+      <a
+        href="https://www.behance.net/augustdesigns18"
+        target="_blank"
+        rel="noreferrer noopener"
+        className="flex justify-center mt-12"
+      >
         <button className="capitalize border border-[#FF8762] px-8 py-2 rounded-2xl text-base font-normal">
           {" "}
           View more
         </button>
-      </div>
+      </a>
     </>
   );
 };
