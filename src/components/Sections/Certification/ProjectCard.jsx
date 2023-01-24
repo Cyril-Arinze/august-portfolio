@@ -11,7 +11,7 @@ const ProjectCard = ({ title, link, image, expandText }) => {
         />
       </div>
       <div>
-        <p className="text-xl font-medium mb-2">{title}</p>
+        <p className="text-xl sm:text-2xl font-medium mb-2">{title}</p>
 
         <a
           href={link ? link : "/"}

@@ -5,7 +5,7 @@ import AboutGallery from "./AboutGallery";
 const AboutMeSection = () => {
   return (
     <section>
-      <div className="mex-w-7xl p-8">
+      <div className="mex-w-7xl p-8 mx-auto">
         <About />
         <AboutGallery />
       </div>

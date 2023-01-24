@@ -24,23 +24,25 @@ const DUMMY_DATA = [
 const WhatIdoSection = () => {
   return (
     <section>
-      <div className="max-w-7xl p-8">
-        <h1 className="text-white font-bold text-2xl">
+      <div className="max-w-7xl p-8 mx-auto">
+        <h1 className="text-white font-bold text-2xl sm:text-3xl lg:text-[48px] mt-5 mb-9">
           What i <span className=" text-[#FF8762]">do</span>
         </h1>
-        {DUMMY_DATA.map((data, index) => {
-          return (
-            <Card
-              key={index}
-              icon={data.icon}
-              title={data.title}
-              description={data.description}
-              externalLink={data.externalLink}
-              internalLink={data.internalLink}
-              color={data.color}
-            />
-          );
-        })}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {DUMMY_DATA.map((data, index) => {
+            return (
+              <Card
+                key={index}
+                icon={data.icon}
+                title={data.title}
+                description={data.description}
+                externalLink={data.externalLink}
+                internalLink={data.internalLink}
+                color={data.color}
+              />
+            );
+          })}
+        </div>
       </div>
     </section>
   );

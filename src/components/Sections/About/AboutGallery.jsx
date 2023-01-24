@@ -7,7 +7,7 @@ import CMSImage5 from "../../../assests/images/CMS5.png";
 
 const AboutGallery = () => {
   return (
-    <div className="relative h-[400px] mt-8">
+    <div className="relative h-[400px] mt-8 sm:hidden">
       <div className="w-[110px] absolute right-[10%]">
         <img
           src={CMSImage1}

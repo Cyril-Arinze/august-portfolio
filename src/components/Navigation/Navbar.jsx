@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "../../assests/images/AIA.png";
 
 function CloseIcon() {
@@ -48,44 +48,73 @@ function Hamburger() {
   );
 }
 
+const initialNavState = window.innerWidth >= 640 ? true : false;
+const isMobile = window.innerWidth < 640;
 const Navbar = () => {
-  const [navIsShown, setNavIsShown] = useState(false);
+  const [navIsShown, setNavIsShown] = useState(initialNavState);
 
   const toggleNavHandler = () => {
     setNavIsShown((oldState) => !oldState);
   };
   return (
     <header>
-      <div className="max-w-7xl mx-auto flex justify-between p-8 ">
+      <div className="max-w-7xl mx-auto flex justify-between items-center p-8 ">
         <div>
-          <img src={Logo} alt="" />
+          <img
+            src={Logo}
+            alt=""
+            className="sm:aspect-auto sm:w-16 xl:w-20 object-cover"
+          />
         </div>
         <nav>
-          <button onClick={toggleNavHandler}>
+          <button onClick={toggleNavHandler} className="sm:hidden">
             <Hamburger></Hamburger>
           </button>
           {navIsShown && (
-            <div className=" fixed top-0 left-0 w-screen h-screen bg-[#080707] text-white flex flex-col justify-evenly items-center">
-              <ul className="space-y-7 text-center font-medium text-xl">
-                <li onClick={toggleNavHandler}>
-                  <Link to="/about">About me</Link>
+            <div className=" fixed top-0 left-0 w-screen h-screen bg-[#080707] text-white flex flex-col justify-evenly z-50 items-center sm:relative sm:h-fit sm:w-fit sm:flex-row sm:top-auto sm:left-auto sm:gap-8 lg:gap-16">
+              <ul className="text-center font-medium text-xl flex flex-col sm:flex-row gap-8 lg:gap-16 sm:items-center sm:text-base sm:font-normal">
+                <li onClick={isMobile ? toggleNavHandler : null}>
+                  <NavLink
+                    className={(a) =>
+                      a.isActive ? "text-[#FF8762]" : "text-white"
+                    }
+                    to="/home"
+                  >
+                    Home
+                  </NavLink>
                 </li>
-                <li onClick={toggleNavHandler}>
-                  <a href="#projects">Projects</a>
+                <li onClick={isMobile ? toggleNavHandler : null}>
+                  <NavLink
+                    className={(a) =>
+                      a.isActive ? "text-[#FF8762]" : "text-white"
+                    }
+                    to="/about"
+                  >
+                    About me
+                  </NavLink>
                 </li>
-                <li onClick={toggleNavHandler}>
+                <li onClick={isMobile ? toggleNavHandler : null}>
+                  <a href="https://www.behance.net/augustdesigns18">Projects</a>
+                </li>
+                <li onClick={isMobile ? toggleNavHandler : null}>
                   <a
                     href="../../assests/Ambrose Ijeoma Augustina resume.pdf"
                     download
                   >
-                    Resume(product design)
+                    Resume <span className="sm:hidden">(product design)</span>
                   </a>
                 </li>
               </ul>
               <div>
-                <button onClick={toggleNavHandler}>
+                <button onClick={toggleNavHandler} className="sm:hidden">
                   <CloseIcon></CloseIcon>
                 </button>
+                <a
+                  href="mailto:Augustdesigns18@gmail.com"
+                  className="bg-[#FF8762] py-3 px-5 rounded-2xl text-sm w-fit justify-self-end hidden sm:block"
+                >
+                  Contact me
+                </a>
               </div>
             </div>
           )}

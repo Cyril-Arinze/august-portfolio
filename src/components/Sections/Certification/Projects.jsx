@@ -9,7 +9,7 @@ const DUMMY_PROJECTS = [
     image: CommunityReachImg,
     title: "Community outreaches",
     link: "https://instagram.com/ngcfoundation_?igshid=YmMyMTA2M2Y=",
-    expandText: "Read more",
+    expandText: "See more",
   },
   {
     image: BetaSaverImg,
@@ -28,10 +28,13 @@ const DUMMY_PROJECTS = [
 const Projects = () => {
   return (
     <>
-      <h2 className="mt-14 mb-6 text-xl font-bold " id="projects">
+      <h2
+        className="mt-14 sm:mt-16 mb-6 text-xl sm:text-3xl lg:text-4xl xl:text-5xl text-center font-bold "
+        id="projects"
+      >
         Featured <span className="text-[#FF8762]">projects</span>
       </h2>
-      <ul className="flex flex-col gap-y-12">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-5">
         {DUMMY_PROJECTS.map((project, index) => {
           return (
             <ProjectCard
@@ -50,7 +53,7 @@ const Projects = () => {
         rel="noreferrer noopener"
         className="flex justify-center mt-12"
       >
-        <button className="capitalize border border-[#FF8762] px-8 py-2 rounded-2xl text-base font-normal">
+        <button className="capitalize border border-[#FF8762] px-8 py-2 rounded-2xl text-base sm:text-lg font-normal">
           {" "}
           View more
         </button>

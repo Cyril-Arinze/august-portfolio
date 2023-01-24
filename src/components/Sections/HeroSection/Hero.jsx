@@ -1,6 +1,7 @@
 import React from "react";
 import heroImage from "../../../assests/images/ImageHero.png";
-import Navbar from "../../Navigation/Navbar";
+import heroImageLG from "../../../assests/images/Group 63.png";
+import HeroAbout from "../About/HeroAbout";
 
 function LinkedInIcon() {
   return (
@@ -54,49 +55,65 @@ function BehanceIcon() {
 const Hero = () => {
   return (
     <section>
-      <div className=" max-w-7xl">
-        <Navbar />
-        <div className="flex justify-center">
-          <img src={heroImage} alt="AIA" />
+      <div className=" max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:items-center p-8 gap-y-5">
+          <div className="flex justify-center sm:block sm:order-2 sm:justify-self-end">
+            <picture>
+              <source media="(min-width:1024px)" srcSet={heroImageLG} />
+              <img
+                src={heroImage}
+                alt="AIA"
+                className=" lg:w-[480px] lg:h-[622px] object-cover"
+              />
+            </picture>
+          </div>
+          <div className=" grid gap-y-6">
+            <div className="space-y-6">
+              <p className=" font-bold text-2xl text-white sm:text-3xl lg:text-[40px] lg:leading-[60px]">
+                Hello, I am{" "}
+                <span className=" text-[#FF8762]">
+                  Ambrose Ijeoma Augustina
+                </span>
+                , a product designer (ui/ux) and a non-profit founder.
+              </p>
+            </div>
+            <div className=" grid gap-y-6">
+              <div className=" space-x-6 text-white text-sm font-normal">
+                <a
+                  href="mailto:Augustdesigns18@gmail.com"
+                  className="bg-[#FF8762] px-5 sm:px-8 py-3 rounded-xl inline-block"
+                >
+                  Hire me
+                </a>
+                <a
+                  href="https://www.behance.net/augustdesigns18"
+                  className="bg-transparent px-5 sm:px-8 py-3 rounded-xl border border-[#FF8762] inline-block"
+                >
+                  Projects
+                </a>
+              </div>
+              <div className="flex  space-x-6">
+                <a
+                  href="https://www.linkedin.com/in/ijeomaambrose"
+                  className=" bg-[#FF8762] rounded-full w-10 aspect-square flex items-center justify-center"
+                >
+                  <LinkedInIcon></LinkedInIcon>
+                </a>
+                <a
+                  href="https://www.behance.net/augustdesigns18"
+                  className=" bg-[#FF8762] rounded-full w-10 aspect-square flex items-center justify-center"
+                >
+                  <BehanceIcon></BehanceIcon>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="p-8 space-y-6">
-          <div className="space-y-6">
-            <p className=" font-bold text-2xl text-white">
-              Hello, I am{" "}
-              <span className=" text-[#FF8762]">Ambrose Ijeoma Augustina</span>,
-              a product designer (ui/ux) and a non-profit founder.
-            </p>
-          </div>
-          <div className="space-y-6">
-            <div className=" space-x-6 text-white text-sm font-normal">
-              <a
-                href="mailto:Augustdesigns18@gmail.com"
-                className="bg-[#FF8762] px-5 py-3 rounded-xl inline-block"
-              >
-                Hire me
-              </a>
-              <a
-                href="#projects"
-                className="bg-transparent px-5 py-3 rounded-xl border border-[#FF8762] inline-block"
-              >
-                Projects
-              </a>
-            </div>
-            <div className="flex  space-x-6">
-              <a
-                href="https://www.linkedin.com/in/ijeomaambrose"
-                className=" bg-[#FF8762] rounded-full w-10 aspect-square flex items-center justify-center"
-              >
-                <LinkedInIcon></LinkedInIcon>
-              </a>
-              <a
-                href="https://www.behance.net/augustdesigns18"
-                className=" bg-[#FF8762] rounded-full w-10 aspect-square flex items-center justify-center"
-              >
-                <BehanceIcon></BehanceIcon>
-              </a>
-            </div>
-          </div>
+        <div className="hidden sm:block text-white tracking-wide p-8">
+          <h2 className="sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center my-9 ">
+            About <span className="text-[#FF8762]">Me</span>
+          </h2>
+          <HeroAbout />
         </div>
       </div>
     </section>
